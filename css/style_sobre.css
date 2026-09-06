@@ -1,0 +1,206 @@
+body {
+    background-color: #000000; 
+    font-family: 'Times New Roman', Times, serif; 
+}
+header {
+    background-color: #110102;
+    border-bottom: 2px solid #d4a359;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    position: relative; 
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: #e2c185; 
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ffffff;
+    
+}
+.logo {
+    position: relative;
+    height: 49px;
+}
+.logo img {
+    height: 11em;
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: -15px;
+    z-index: 10;
+}
+p{
+   color: #ffffff; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    letter-spacing: 3px; 
+}
+footer {
+    background-color: #110102;
+    border-top: 2px solid #d4a359;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px; 
+    width: 100%;
+}
+footer p{
+    font-weight: bold;
+    color: #ffffff; 
+}
+
+/*TÍTULOS*/
+
+.titulo {
+    background-color: #420707;
+    color: #c99b35;
+
+    letter-spacing: 5px;
+    text-align: center;
+
+    font-size: 20px;
+    padding: 8px 20px;
+}
+
+
+/*SOBRE */
+
+.sobre {
+    position: relative;
+    min-height: 175px;
+    padding-top: 10px;
+}
+
+.titulo-sobre {
+    width: 190px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.texto {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    line-height: 1.35;
+}
+
+.texto-sobre {
+    padding: 65px 45px 15px 35px;
+    font-size: 13px;
+}
+
+.texto-sobre p {
+    margin-bottom: 3px;
+}
+
+
+/*MISSÃO */
+
+.missao {
+    min-height: 90px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    position: relative;
+}
+
+.texto-missao {
+    width: 53%;
+
+    font-family: Georgia, serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    line-height: 1.4;
+
+    padding: 10px 20px;
+}
+
+.titulo-missao {
+    width: 150px;
+    margin-right: 0;
+}
+
+
+/*VALORES*/
+
+.valores {
+    position: relative;
+    padding-top: 8px;
+}
+
+.titulo-valores {
+    width: 140px;
+    margin-bottom: 12px;
+}
+
+.texto-valores {
+    padding: 0 25px 18px 20px;
+    font-size: 12px;
+}
+
+.texto-valores p {
+    margin-bottom: 3px;
+}
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 800px) {
+
+    .pagina {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .cabecalho {
+        height: auto;
+        min-height: 60px;
+        padding: 10px;
+    }
+
+    nav {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .texto-sobre {
+        padding: 65px 20px 15px;
+    }
+
+    .texto-missao {
+        width: 60%;
+        font-size: 11px;
+    }
+
+    .texto-valores {
+        font-size: 11px;
+    }
+}
