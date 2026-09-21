@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #050000;
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    overflow-x: hidden;
+}
+
+.titulo-principal{
+    background: linear-gradient(180deg, #500909 0%, #350505 100%);
+    min-height: 110px;
+    padding: 15px 15%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+}
+
+menu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cabecalho {
+    width: 100%;
+    height: 70px;
+
+    background-color: #050000;
+
+    border-bottom: 1px solid #d4a72c;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 35px;
+
+    position: relative;
+}
+
+.pesquisa {
+    font-size: 17px;
+
+    margin-right: 18px;
+}
+
+.logo-topo {
+    position: absolute;
+
+    right: 25px;
+
+    top: 5px;
+
+    text-align: center;
+}
+
+.logo-topo h1 {
+    color: #d4a72c;
+
+    font-size: 48px;
+
+    line-height: 42px;
+
+    font-weight: normal;
+
+    letter-spacing: -6px;
+}
+
+.logo-topo p {
+    color: #d4a72c;
+
+    font-size: 6px;
+
+    letter-spacing: 3px;
+}
+
+main {
+    width: 100%;
+
+    background-color: #050000;
+}
+
+.secao-cores {
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 60px 30px 70px;
+}
+
+.secao-cores h2 {
+
+    color: #d4a72c;
+
+    font-size: 32px;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 15px;
+}
+
+.descricao {
+
+    color: white;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+    background: linear-gradient(180deg, #500909 0%, #350505 100%);
+    min-height: 90px;
+    padding: 15px 10%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+}
+
+.lista-cores {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 30px;
+}
+
+.card-cor {
+
+    width: 33.333%;
+
+    background-color: #260606;
+
+    border: 1px solid #d4a72c;
+
+    padding: 10px;
+
+    transition: 0.3s;
+}
+
+.card-cor:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 25px rgba(212, 167, 44, 0.25);
+}
+
+
+.card-cor img {
+
+    width: 100%;
+
+    height: 260px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.card-cor h3 {
+
+    color: #d4a72c;
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    padding: 18px 5px 10px;
+}
+.secao-logo {
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 70px 30px;
+
+    border-top: 1px solid #320808;
+}
+
+.secao-logo h2 {
+
+    color: #d4a72c;
+
+    font-size: 32px;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 15px;
+}
+
+
+.logo-empresa {
+
+    width: 420px;
+
+    height: 320px;
+
+    margin: 0 auto;
+
+    background-color: #f3ebeb;
+
+    border: 1px solid #d4a72c;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 0 35px rgba(212, 167, 44, 0.12);
+}
+
+.logo-empresa img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+}
+.secao-foto {
+
+    width: 100%;
+
+    padding: 20px 30px 80px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.secao-foto img {
+
+    width: 75%;
+
+    max-width: 900px;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border: 1px solid #d4a72c;
+}
+
+footer {
+background-color: #110102;
+    border-top: 2px solid #d4a359;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px; 
+    width: 100%;
+}
+
+
+@media (max-width: 800px) {
+
+    .cabecalho {
+
+        height: auto;
+
+        min-height: 90px;
+
+        flex-direction: column;
+
+        padding: 15px;
+
+        gap: 15px;
+    }
+
+    .logo-topo {
+
+        position: static;
+    }
+
+
+    .lista-cores {
+
+        flex-direction: column;
+
+        width: 90%;
+
+        gap: 25px;
+    }
+
+    .card-cor {
+
+        width: 100%;
+    }
+
+    .logo-empresa {
+
+        width: 85%;
+
+        height: 280px;
+    }
+
+    .secao-foto img {
+
+        width: 90%;
+
+        height: 300px;
+    }
+
+
+}
+
+
+@media (max-width: 500px) {
+
+    .secao-cores h2,
+    .secao-logo h2 {
+
+        font-size: 24px;
+
+        letter-spacing: 4px;
+    }
+
+    .logo-empresa {
+
+        width: 90%;
+
+        height: 230px;
+    }
+
+    .secao-foto img {
+
+        width: 95%;
+
+        height: 250px;
+    }
+
+}

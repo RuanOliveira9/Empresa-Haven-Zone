@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.informacoes-contato {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+}
+p{
+    color: #161414; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    letter-spacing: 3px; 
+}
+
+.linha-contato {
+    width: 100%;
+
+    display: flex;
+    align-items: stretch;
+
+    gap: 25px;
+}
+
+
+.linha-contato h2 {
+    width: 130px;
+    min-width: 130px;
+
+    min-height: 48px;
+
+    background-color: #4b0a0a;
+
+    color: #d4a72c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 12px;
+
+    font-weight: normal;
+
+    letter-spacing: 3px;
+}
+
+.conteudo-contato {
+    flex: 1;
+
+    min-height: 70px;
+
+    padding: 10px 18px;
+
+    background: linear-gradient(
+        110deg,
+        #f2c765,
+        #c58a2c,
+        #e3a844
+    );
+
+    color: #180505;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    line-height: 18px;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+.conteudo-contato p {
+    margin: 0;
+}
+
+.horario {
+    min-height: 48px;
+
+    text-align: justify;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    line-height: 11px;
+}
+
+
+
+.lista {
+    min-height: 68px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    line-height: 15px;
+}
+
+
+
+@media (max-width: 650px) {
+
+    .informacoes-contato {
+        width: 90%;
+    }
+
+    .linha-contato {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .linha-contato h2 {
+        width: 100%;
+        min-width: 0;
+
+        min-height: 40px;
+    }
+
+    .conteudo-contato {
+        width: 100%;
+    }
+}
+
+footer {
+    background-color: #110102;
+    border-top: 2px solid #d4a359;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px; 
+    width: 100%;
+}
+.footer p{
+    font-weight: bold;
+    color: #ffffff; 
+} 
+
+

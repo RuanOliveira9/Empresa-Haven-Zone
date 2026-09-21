@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #000000; 
+    color: #141414;
+    overflow-x: hidden;
+}
+
+.cabecalho {
+    width: 100%;
+    min-height: 90px;
+
+    background-color: #f0e7e7;
+    color: #e2c185; 
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 5%;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo h1 {
+    font-size: 48px;
+    line-height: 40px;
+
+    color: #d4a72c;
+
+    letter-spacing: 5px;
+}
+
+.logo p {
+    font-size: 8px;
+    letter-spacing: 3px;
+
+    color: #d4a72c;
+}
+
+menu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+} 
+.introducao {
+    text-align: center;
+
+    padding: 55px 20px 35px;
+}
+
+.introducao h2 {
+    font-size: 32px;
+
+   color: #d4a359;; 
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+.introducao p {
+    font-size: 20px;
+
+    color: #f8f3f3;
+    background: linear-gradient(180deg, #500909 0%, #350505 100%);
+    min-height: 110px;
+    padding: 15px 15%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+}
+
+.categoria {
+    width: 94%;
+    max-width: 1250px;
+
+    margin: 0 auto 70px;
+}
+
+.titulo-categoria {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.titulo-categoria h2 {
+    display: inline-block;
+
+    color: #d4a72c;
+
+    font-size: 27px;
+
+    letter-spacing: 5px;
+
+    border-bottom: 2px solid #d4a72c;
+
+    padding-bottom: 8px;
+}
+
+
+.carrossel {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.lista-produtos {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    gap: 25px;
+
+    overflow-x: hidden;
+
+    scroll-behavior: smooth;
+
+    padding: 10px 55px 25px;
+}
+
+.produto {
+    flex: 0 0 250px;
+
+    width: 250px;
+    min-width: 250px;
+
+    background-color: #420707;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px #d4a72c(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px #d4a72c(0, 0, 0, 0.18);
+}
+
+.produto img {
+    width: 100%;
+    height: 300px;
+
+    display: block;
+
+    object-fit: cover;
+
+    background-color: #ddd;
+}
+
+.produto h3 {
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    color: #d4a72c;
+
+    margin: 18px 18px 15px;
+}
+
+.produto button {
+    border: none;
+
+    background-color: #111;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    padding: 11px 18px;
+
+    margin: 0 18px 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.produto button:hover {
+    background-color: #d4a72c;
+
+    color: #111;
+}
+
+
+.seta {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #292929;
+
+    color: white;
+
+    font-size: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.seta:hover {
+    background-color: #d4a72c;
+
+    color: #111;
+
+    transform: translateY(-50%) scale(1.08);
+}
+
+.seta.esquerda {
+    left: 5px;
+}
+
+.seta.direita {
+    right: 5px;
+}
+
+footer {
+    background-color: #110102;
+    border-top: 2px solid #d4a359;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px; 
+    width: 100%;
+}
+
+
+@media (max-width: 900px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .produto {
+        flex-basis: 220px;
+        min-width: 220px;
+    }
+
+    .produto img {
+        height: 270px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .introducao h2 {
+        font-size: 24px;
+    }
+
+    .introducao p {
+        font-size: 13px;
+    }
+
+    .titulo-categoria h2 {
+        font-size: 22px;
+    }
+
+    .lista-produtos {
+        gap: 15px;
+
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .produto {
+        flex-basis: 200px;
+        min-width: 200px;
+    }
+
+    .produto img {
+        height: 240px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+}
