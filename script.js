@@ -1,25 +1,48 @@
-
 function moverDireita(id) {
-       <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/style_servicos.css">
-
     const lista = document.getElementById(id);
 
-    lista.scrollBy({
-        left: 550,
-        behavior: "smooth"
-    });
+    if (lista.scrollLeft + lista.clientWidth >= lista.scrollWidth - 10) {
+        animarScroll(lista, 0);
+    } else {
+        animarScroll(lista, lista.scrollLeft + 550);
+    }
+}
 
+function moverEsquerda(id) {
+    const lista = document.getElementById(id);
+
+    if (lista.scrollLeft <= 10) {
+        animarScroll(lista, lista.scrollWidth - lista.clientWidth);
+    } else {
+        animarScroll(lista, lista.scrollLeft - 550);
+    }
 }
 
 
-function moverEsquerda(id) {
+function animarScroll(elemento, destino) {
+    const inicio = elemento.scrollLeft;
+    const distancia = destino - inicio;
+    const duracao = 700; // duração em milissegundos
+    let inicioTempo = null;
 
-    const lista = document.getElementById(id);
+    function animacao(tempoAtual) {
 
-    lista.scrollBy({
-        left: -550,
-        behavior: "smooth"
-    });
+        if (!inicioTempo) inicioTempo = tempoAtual;
 
+        const progresso = Math.min(
+            (tempoAtual - inicioTempo) / duracao,
+            1
+        );
+
+        // Suavização
+        const suavizado = 1 - Math.pow(1 - progresso, 3);
+
+        elemento.scrollLeft = inicio + distancia * suavizado;
+
+        if (progresso < 1) {
+            requestAnimationFrame(animacao);
+        }
+    }
+
+    requestAnimationFrame(animacao);
 }

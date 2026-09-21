@@ -1,133 +1,105 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    background-color: #050000;
-
-    color: white;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    overflow-x: hidden;
+    background-color: #000000; 
+    font-family: 'Times New Roman', Times, serif; 
 }
-
-.titulo-principal{
-    background: linear-gradient(180deg, #500909 0%, #350505 100%);
-    min-height: 110px;
-    padding: 15px 15%;
-    
+header {
+    background-color: #110102;
+    border-bottom: 2px solid #d4a359;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    letter-spacing: 2px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 15px;
+    padding: 8px 40px;
+    position: relative; 
 }
-
-menu{
+.menu{
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.cabecalho {
-    width: 100%;
-    height: 70px;
-
-    background-color: #050000;
-
-    border-bottom: 1px solid #d4a72c;
-
+nav ul {
     display: flex;
+    list-style: none;
+    gap: 25px;
+}
 
-    align-items: center;
-
-    padding: 0 35px;
-
+nav a {
+    color: #e2c185; 
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ffffff;
+    
+}
+.logo {
     position: relative;
+    height: 49px;
 }
-
-.pesquisa {
-    font-size: 17px;
-
-    margin-right: 18px;
-}
-
-.logo-topo {
+.logo img {
+    height: 11em;
+    width: auto;
     position: absolute;
-
-    right: 25px;
-
-    top: 5px;
-
+    right: 0;
+    top: -15px;
+    z-index: 10;
+}
+p{
+   color: #ffffff; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    letter-spacing: 3px; 
+}
+footer {
+    background-color: #110102;
+    border-top: 2px solid #d4a359;
     text-align: center;
-}
-
-.logo-topo h1 {
-    color: #d4a72c;
-
-    font-size: 48px;
-
-    line-height: 42px;
-
-    font-weight: normal;
-
-    letter-spacing: -6px;
-}
-
-.logo-topo p {
-    color: #d4a72c;
-
-    font-size: 6px;
-
-    letter-spacing: 3px;
-}
-
-main {
+    padding: 15px 0;
+    margin-top: 50px; 
     width: 100%;
-
-    background-color: #050000;
 }
-
+footer p{
+    font-weight: bold;
+}
+main {
+    max-width: 2400px;
+    margin: 25px auto;
+    padding: 0 1px;
+}
 .secao-cores {
 
-    width: 100%;
-
     text-align: center;
 
-    padding: 60px 30px 70px;
+    padding: 55px 20px 35px;
 }
 
 .secao-cores h2 {
 
-    color: #d4a72c;
+    color: #d4a359; 
 
     font-size: 32px;
 
-    letter-spacing: 7px;
+    letter-spacing: 5px;
 
     margin-bottom: 15px;
 }
 
-.descricao {
+.secao-cores p, .descricao {
 
-    color: white;
+    font-size: 20px;
 
-    font-size: 15px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 30px;
+    color: #f8f3f3;
     background: linear-gradient(180deg, #500909 0%, #350505 100%);
-    min-height: 90px;
-    padding: 15px 10%;
+    min-height: 60px;
+    padding: 15px 15%;
     
     display: flex;
     align-items: center;
@@ -280,27 +252,13 @@ main {
     border: 1px solid #d4a72c;
 }
 
-footer {
-background-color: #110102;
-    border-top: 2px solid #d4a359;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 50px; 
-    width: 100%;
-}
 
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 
     .cabecalho {
 
-        height: auto;
-
-        min-height: 90px;
-
         flex-direction: column;
-
-        padding: 15px;
 
         gap: 15px;
     }
@@ -343,7 +301,7 @@ background-color: #110102;
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
 
     .secao-cores h2,
     .secao-logo h2 {
